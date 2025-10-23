@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - viresh ranjanagi</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Background Canvas -->
+    <canvas class="background-canvas" id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="main-nav" id="main-nav">
+        <div class="nav-container">
+            <div class="nav-items">
+                <button class="nav-item active" data-section="home">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Home</span>
+                </button>
+                <button class="nav-item" data-section="skills">
+                    <span class="nav-icon">💻</span>
+                    <span class="nav-text">Skills</span>
+                </button>
+                <button class="nav-item" data-section="projects">
+                    <span class="nav-icon">🚀</span>
+                    <span class="nav-text">Projects</span>
+                </button>
+                <button class="nav-item" data-section="education">
+                    <span class="nav-icon">🎓</span>
+                    <span class="nav-text">Education</span>
+                </button>
+                <button class="nav-item" data-section="achievements">
+                    <span class="nav-icon">🏆</span>
+                    <span class="nav-text">Achievements</span>
+                </button>
+                <button class="nav-item" data-section="blog">
+                    <span class="nav-icon">📝</span>
+                    <span class="nav-text">Blog</span>
+                </button>
+                <button class="nav-item" data-section="contact">
+                    <span class="nav-icon">📧</span>
+                    <span class="nav-text">Contact</span>
+                </button>
+            </div>
+            <button class="theme-toggle" id="theme-toggle">
+                <span>🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobile-menu-btn">
+        <span>☰</span>
+    </button>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <button class="mobile-menu-close" id="mobile-menu-close">✕</button>
+            <div class="mobile-nav-items">
+                <button class="mobile-nav-item active" data-section="home">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Home</span>
+                </button>
+                <button class="mobile-nav-item" data-section="skills">
+                    <span class="nav-icon">💻</span>
+                    <span class="nav-text">Skills</span>
+                </button>
+                <button class="mobile-nav-item" data-section="projects">
+                    <span class="nav-icon">🚀</span>
+                    <span class="nav-text">Projects</span>
+                </button>
+                <button class="mobile-nav-item" data-section="education">
+                    <span class="nav-icon">🎓</span>
+                    <span class="nav-text">Education</span>
+                </button>
+                <button class="mobile-nav-item" data-section="achievements">
+                    <span class="nav-icon">🏆</span>
+                    <span class="nav-text">Achievements</span>
+                </button>
+                <button class="mobile-nav-item" data-section="blog">
+                    <span class="nav-icon">📝</span>
+                    <span class="nav-text">Blog</span>
+                </button>
+                <button class="mobile-nav-item" data-section="contact">
+                    <span class="nav-icon">📧</span>
+                    <span class="nav-text">Contact</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Button -->
+    <button class="chat-btn" id="chat-btn">
+        <span>💬</span>
+    </button>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="back-to-top">
+        <span>↑</span>
+    </a>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">VIRESH RANJANAGI</h1>
+                        <p class="hero-subtitle">
+                            <span class="typing-container">
+                                <span class="typing-text" id="typing-text">Creative Developer</span>
+                            </span>
+                        </p>
+                    </div>
+                    <p class="hero-description">
+                        B.Tech CSE Student Passionate about technology, innovation, and building solutions that make a difference.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <span>Instagram</span>
+                        </a>
+                        <a href="mailto:alex@example.com" class="social-link">
+                            <span>Email</span>
+                        </a>
+                    </div>
+                    <button class="cta-button" id="explore-work-btn">
+                        Explore My Work
+                        <span class="cta-arrow">↓</span>
+                    </button>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>↓</span>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section id="stats" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">By The Numbers</h2>
+                    <p class="section-subtitle">Quantifying my journey in tech</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="25">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="15">0</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="3">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="50">0</div>
+                        <div class="stat-label">Technologies Mastered</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Technical Skills</h2>
+                    <p class="section-subtitle">Technologies and tools I work with</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-icon">💻</div>
+                        <h3>Frontend</h3>
+                        <div class="skill-bar"></div>
+                        <p class="skill-description">React, Vue, Angular, TypeScript</p>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-icon">⚙️</div>
+                        <h3>Backend</h3>
+                        <div class="skill-bar"></div>
+                        <p class="skill-description">Node.js, Python, MongoDB, PostgreSQL</p>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-icon">🎨</div>
+                        <h3>Design</h3>
+                        <div class="skill-bar"></div>
+                        <p class="skill-description">Figma, Adobe XD, Photoshop, Illustrator</p>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-icon">🛠️</div>
+                        <h3>Tools</h3>
+                        <div class="skill-bar"></div>
+                        <p class="skill-description">Git, Docker, AWS, VS Code</p>
+                    </div>
+                </div>
+
+                <div class="skills-details">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>React.js</h3>
+                            <div class="skill-status"></div>
+                        </div>
+                        <p>Advanced component architecture, hooks, context API, and performance optimization</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">JSX</span>
+                            <span class="skill-tag">Redux</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Three.js & WebGL</h3>
+                            <div class="skill-status"></div>
+                        </div>
+                        <p>Creating interactive 3D visualizations and immersive web experiences</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">GLSL</span>
+                            <span class="skill-tag">WebGL</span>
+                            <span class="skill-tag">3D Graphics</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h3>Node.js</h3>
+                            <div class="skill-status"></div>
+                        </div>
+                        <p>Building scalable server-side applications and RESTful APIs</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Express</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Innovative solutions built with passion</p>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <div class="project-info">
+                                    <h3>AI Portfolio Showcase</h3>
+                                    <div class="project-date">
+                                        <span>📅</span>
+                                        <span>Jan 2025</span>
+                                    </div>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/username/ai-portfolio" target="_blank" rel="noopener noreferrer" class="project-link">
+                                        <span>GitHub</span>
+                                    </a>
+                                    <a href="https://github.com/username/ai-portfolio" target="_blank" rel="noopener noreferrer" class="project-link">
+                                        <span>Live Demo</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Built an immersive 3D portfolio with WebGL transitions and AI-powered project recommendations
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">React</span>
+                                <span class="project-tag">Three.js</span>
+                                <span class="project-tag">TensorFlow.js</span>
+                                <span class="project-tag">Framer Motion</span>
+                            </div>
+                            <div class="project-highlight"></div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <div class="project-info">
+                                    <h3>E-Commerce Platform</h3>
+                                    <div class="project-date">
+                                        <span>📅</span>
+                                        <span>Dec 2024</span>
+                                    </div>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/username/ecommerce" target="_blank" rel="noopener noreferrer" class="project-link">
+                                        <span>GitHub</span>
+                                    </a>
+                                    <a href="https://github.com/username/ecommerce" target="_blank" rel="noopener noreferrer" class="project-link">
+                                        <span>Live Demo</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Full-stack e-commerce solution with real-time inventory management and payment integration
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">React</span>
+                                <span class="project-tag">Node.js</span>
+                                <span class="project-tag">MongoDB</span>
+                                <span class="project-tag">Stripe</span>
+                            </div>
+                            <div class="project-highlight"></div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <div class="project-info">
+                                    <h3>AR Learning Platform</h3>
+                                    <div class="project-date">
+                                        <span>📅</span>
+                                        <span>Nov 2024</span>
+                                    </div>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/username/ar-learning" target="_blank" rel="noopener noreferrer" class="project-link">
+                                        <span>GitHub</span>
+                                    </a>
+                                    <a href="https://github.com/username/ar-learning" target="_blank" rel="noopener noreferrer" class="project-link">
+                                        <span>Live Demo</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Augmented reality educational platform with interactive 3D models and real-time collaboration
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">React Native</span>
+                                <span class="project-tag">ARCore</span>
+                                <span class="project-tag">Three.js</span>
+                                <span class="project-tag">WebRTC</span>
+                            </div>
+                            <div class="project-highlight"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Education</h2>
+                    <p class="section-subtitle">Academic journey and achievements</p>
+                </div>
+                
+                <div class="education-timeline">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">🎓</div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>B.Tech Computer Science & Engineering</h3>
+                                <div class="timeline-date">
+                                    <span>📅</span>
+                                    <span>2024 - Present</span>
+                                </div>
+                            </div>
+                            <p class="timeline-description">
+                                Pursuing Bachelor of Technology in Computer Science & Engineering with focus on AI/ML and Web Technologies. Current GPA: 3.8/4.0
+                            </p>
+                            <div class="timeline-progress">
+                                <div class="progress-bar"></div>
+                                <span class="progress-text">In Progress</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon">🏫</div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Higher Secondary Education</h3>
+                                <div class="timeline-date">
+                                    <span>📅</span>
+                                    <span>2022 - 2024</span>
+                                </div>
+                            </div>
+                            <p class="timeline-description">
+                                Completed with 95% aggregate. Focused on Computer Science, Mathematics, and Physics.
+                            </p>
+                            <div class="timeline-progress">
+                                <div class="progress-bar" style="width: 100%"></div>
+                                <span class="progress-text">Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Education Details -->
+                <div class="education-details">
+                    <div class="education-card">
+                        <div class="education-header">
+                            <div class="education-icon">📚</div>
+                            <div class="education-info">
+                                <h3>Certifications</h3>
+                                <div class="education-date">2023 - 2024</div>
+                            </div>
+                        </div>
+                        <p class="education-description">
+                            Professional certifications in web development and AI technologies.
+                        </p>
+                        <div class="education-highlights">
+                            <div class="education-highlight">Full Stack Web Development Certification</div>
+                            <div class="education-highlight">Machine Learning Specialization</div>
+                            <div class="education-highlight">AWS Cloud Practitioner</div>
+                        </div>
+                    </div>
+
+                    <div class="education-card">
+                        <div class="education-header">
+                            <div class="education-icon">🏆</div>
+                            <div class="education-info">
+                                <h3>Academic Awards</h3>
+                                <div class="education-date">2022 - 2024</div>
+                            </div>
+                        </div>
+                        <p class="education-description">
+                            Recognition for academic excellence and technical skills.
+                        </p>
+                        <div class="education-highlights">
+                            <div class="education-highlight">Dean's List for Academic Excellence</div>
+                            <div class="education-highlight">Best Project Award in Web Technologies</div>
+                            <div class="education-highlight">Top 5% in National Coding Competition</div>
+                        </div>
+                    </div>
+
+                    <div class="education-card">
+                        <div class="education-header">
+                            <div class="education-icon">💼</div>
+                            <div class="education-info">
+                                <h3>Workshops & Training</h3>
+                                <div class="education-date">2023 - 2024</div>
+                            </div>
+                        </div>
+                        <p class="education-description">
+                            Hands-on workshops and training programs attended.
+                        </p>
+                        <div class="education-highlights">
+                            <div class="education-highlight">React Advanced Patterns Workshop</div>
+                            <div class="education-highlight">Three.js & WebGL Masterclass</div>
+                            <div class="education-highlight">AI/ML Bootcamp by Google Developers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Achievements</h2>
+                    <p class="section-subtitle">Recognition and milestones</p>
+                </div>
+                
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">🏆</div>
+                        <div class="achievement-date">
+                            <span>📅</span>
+                            <span>Dec 2024</span>
+                        </div>
+                        <h3>Smart India Hackathon 2024</h3>
+                        <p>First place winner for developing an AI-powered education platform that helps students learn programming interactively.</p>
+                        <div class="achievement-stars">
+                            <span>⭐</span>
+                            <span>⭐</span>
+                            <span>⭐</span>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon">🥈</div>
+                        <div class="achievement-date">
+                            <span>📅</span>
+                            <span>Nov 2024</span>
+                        </div>
+                        <h3>National Coding Championship</h3>
+                        <p>Second place in algorithm design and problem-solving competition among 500+ participants.</p>
+                        <div class="achievement-stars">
+                            <span>⭐</span>
+                            <span>⭐</span>
+                            <span>⭐</span>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon">🚀</div>
+                        <div class="achievement-date">
+                            <span>📅</span>
+                            <span>Oct 2024</span>
+                        </div>
+                        <h3>Best Web Project Award</h3>
+                        <p>Recognized for developing an innovative web application with exceptional user experience and performance.</p>
+                        <div class="achievement-stars">
+                            <span>⭐</span>
+                            <span>⭐</span>
+                            <span>⭐</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Testimonials</h2>
+                    <p class="section-subtitle">What clients and colleagues say</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "Alex delivered an exceptional web application that exceeded our expectations. His attention to detail and technical expertise are remarkable."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JS</div>
+                            <div class="author-info">
+                                <h4>John Smith</h4>
+                                <p>CTO, Tech Innovations</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "Working with Alex was a pleasure. He transformed our complex requirements into a beautiful, functional product ahead of schedule."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SD</div>
+                            <div class="author-info">
+                                <h4>Sarah Davis</h4>
+                                <p>Product Manager, Startup Co</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "Alex's innovative approach to problem-solving and his mastery of modern web technologies make him an invaluable team member."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MJ</div>
+                            <div class="author-info">
+                                <h4>Michael Johnson</h4>
+                                <p>Lead Developer, Digital Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Technical Writing</h2>
+                    <p class="section-subtitle">Thoughts, tutorials, and insights</p>
+                </div>
+                
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="blog-meta">
+                            <div class="blog-date">
+                                <span>📅</span>
+                                <span>Jan 10, 2025</span>
+                            </div>
+                            <span>•</span>
+                            <div class="blog-read-time">
+                                <span>📖</span>
+                                <span>5 min read</span>
+                            </div>
+                        </div>
+                        <h3 class="blog-title">Building Immersive 3D Experiences with Three.js</h3>
+                        <p class="blog-excerpt">
+                            A comprehensive guide to creating stunning 3D web experiences using Three.js and WebGL. Learn how to optimize performance and create engaging interactions.
+                        </p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Three.js</span>
+                            <span class="blog-tag">WebGL</span>
+                            <span class="blog-tag">3D Graphics</span>
+                            <span class="blog-tag">Web Development</span>
+                        </div>
+                        <div class="blog-read-more">
+                            <button class="read-more-btn">
+                                Read More
+                                <span>→</span>
+                            </button>
+                        </div>
+                        <div class="blog-highlight"></div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-meta">
+                            <div class="blog-date">
+                                <span>📅</span>
+                                <span>Dec 28, 2024</span>
+                            </div>
+                            <span>•</span>
+                            <div class="blog-read-time">
+                                <span>📖</span>
+                                <span>8 min read</span>
+                            </div>
+                        </div>
+                        <h3 class="blog-title">Mastering React Performance Optimization</h3>
+                        <p class="blog-excerpt">
+                            Deep dive into React performance techniques including memoization, code splitting, and bundle optimization for faster web applications.
+                        </p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">React</span>
+                            <span class="blog-tag">JavaScript</span>
+                            <span class="blog-tag">Performance</span>
+                            <span class="blog-tag">Web Development</span>
+                        </div>
+                        <div class="blog-read-more">
+                            <button class="read-more-btn">
+                                Read More
+                                <span>→</span>
+                            </button>
+                        </div>
+                        <div class="blog-highlight"></div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-meta">
+                            <div class="blog-date">
+                                <span>📅</span>
+                                <span>Dec 15, 2024</span>
+                            </div>
+                            <span>•</span>
+                            <div class="blog-read-time">
+                                <span>📖</span>
+                                <span>6 min read</span>
+                            </div>
+                        </div>
+                        <h3 class="blog-title">The Future of AI in Web Development</h3>
+                        <p class="blog-excerpt">
+                            Exploring how artificial intelligence is revolutionizing web development through automated coding, intelligent interfaces, and personalized experiences.
+                        </p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">AI</span>
+                            <span class="blog-tag">Machine Learning</span>
+                            <span class="blog-tag">Web Development</span>
+                            <span class="blog-tag">Future Tech</span>
+                        </div>
+                        <div class="blog-read-more">
+                            <button class="read-more-btn">
+                                Read More
+                                <span>→</span>
+                            </button>
+                        </div>
+                        <div class="blog-highlight"></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Let's collaborate on something amazing</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <h3>Contact Information</h3>
+                            <div class="contact-methods">
+                                <a href="mailto:alex@example.com" class="contact-method">
+                                    <div class="contact-icon">📧</div>
+                                    <div class="contact-details">
+                                        <p class="contact-label">Email</p>
+                                        <p class="contact-value">veereshtalikoti95@gmail.com</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="tel:+911234567890" class="contact-method">
+                                    <div class="contact-icon">📞</div>
+                                    <div class="contact-details">
+                                        <p class="contact-label">Phone</p>
+                                        <p class="contact-value">+91 78926 10266</p>
+                                    </div>
+                                </a>
+                                
+                                <div class="contact-method">
+                                    <div class="contact-icon">📍</div>
+                                    <div class="contact-details">
+                                        <p class="contact-label">Location</p>
+                                        <p class="contact-value">India</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-note">
+                            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" required placeholder="Enter your name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" required placeholder="xyz@example.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" required placeholder="Project Collaboration">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" required rows="6" placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <span>📤</span>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p class="footer-text">© 2025 Viresh Ranjanagi. Built with passion using modern web technologies.</p>
+        </div>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

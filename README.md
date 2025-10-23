@@ -1,2 +1,16 @@
-# veereshr4446.github.io
-A modern, responsive portfolio website showcasing my skills, projects, and experience as a creative developer. Built with HTML5, CSS3, and Vanilla JavaScript featuring interactive particle animations and smooth UI/UX.  🌐 Live Demo: https://veereshr4446.github.io
+# Viresh Ranjanagi - Portfolio Website
+
+A modern, responsive portfolio website built with HTML, CSS, and JavaScript.
+
+## Features
+
+- **Responsive Design**: Works on all devices from mobile to desktop
+- **Dark/Light Theme**: Toggle between dark and light modes
+- **Interactive Navigation**: Smooth scrolling between sections
+- **Particle Background**: Animated background with interactive particles
+- **Typing Effect**: Dynamic text animation in the hero section
+- **Contact Form**: Functional contact form with validation
+- **Mobile Menu**: Collapsible navigation for mobile devices
+- **Performance Optimized**: Fast loading and smooth animations
+
+
