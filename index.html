@@ -1,557 +1,209 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viresh Ranjanagi | Web & Mobile Developer</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viresh Ranjanagi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loading-screen">
-        <div class="loader"></div>
-    </div>
 
-    <!-- Background Canvas -->
-    <canvas class="background-canvas" id="particles-canvas"></canvas>
-
-    <!-- Navigation -->
-    <nav class="main-nav" id="main-nav">
-        <div class="nav-container">
-            <div class="nav-items">
-                <button class="nav-item active" data-section="home">
-                    <span class="nav-icon">🏠</span>
-                    <span class="nav-text">Home</span>
-                </button>
-                <button class="nav-item" data-section="skills">
-                    <span class="nav-icon">💻</span>
-                    <span class="nav-text">Skills</span>
-                </button>
-                <button class="nav-item" data-section="projects">
-                    <span class="nav-icon">🚀</span>
-                    <span class="nav-text">Projects</span>
-                </button>
-                <button class="nav-item" data-section="education">
-                    <span class="nav-icon">🎓</span>
-                    <span class="nav-text">Education</span>
-                </button>
-                <button class="nav-item" data-section="certifications">
-                    <span class="nav-icon">📜</span>
-                    <span class="nav-text">Certifications</span>
-                </button>
-                <button class="nav-item" data-section="contact">
-                    <span class="nav-icon">📧</span>
-                    <span class="nav-text">Contact</span>
-                </button>
-            </div>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                <span>🌙</span>
-            </button>
+    <!-- Header -->
+    <header class="header">
+        <div class="avatar">👨‍💻</div>
+        <h1>Viresh Ranjanagi</h1>
+        <p class="tagline">Web & Mobile Developer · <span>CSE Student</span></p>
+        <div class="socials">
+            <a href="https://github.com/veereshr4446">GitHub</a>
+            <a href="https://linkedin.com/in/-veeresh-ranjanagi">LinkedIn</a>
+            <a href="mailto:veereshtalikoti95@gmail.com">Email</a>
         </div>
-    </nav>
+    </header>
 
-    <!-- Mobile Menu -->
-    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
-        <span>☰</span>
-    </button>
+    <!-- Bio -->
+    <section class="bio">
+        <p>
+            <strong>Building web & mobile apps</strong> with React Native, TypeScript, and modern JavaScript.
+            Currently pursuing <strong>Computer Science Engineering</strong> at RYMEC Ballari.
+            Passionate about clean code, dynamic programming, and solving real-world problems.
+        </p>
+    </section>
 
-    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
-        <div class="mobile-menu-content">
-            <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">✕</button>
-            <div class="mobile-nav-items">
-                <button class="mobile-nav-item active" data-section="home">
-                    <span class="nav-icon">🏠</span>
-                    <span class="nav-text">Home</span>
-                </button>
-                <button class="mobile-nav-item" data-section="skills">
-                    <span class="nav-icon">💻</span>
-                    <span class="nav-text">Skills</span>
-                </button>
-                <button class="mobile-nav-item" data-section="projects">
-                    <span class="nav-icon">🚀</span>
-                    <span class="nav-text">Projects</span>
-                </button>
-                <button class="mobile-nav-item" data-section="education">
-                    <span class="nav-icon">🎓</span>
-                    <span class="nav-text">Education</span>
-                </button>
-                <button class="mobile-nav-item" data-section="certifications">
-                    <span class="nav-icon">📜</span>
-                    <span class="nav-text">Certifications</span>
-                </button>
-                <button class="mobile-nav-item" data-section="contact">
-                    <span class="nav-icon">📧</span>
-                    <span class="nav-text">Contact</span>
-                </button>
+    <!-- Skills -->
+    <section>
+        <h2 class="section-title">⚡ <span>Skills</span></h2>
+        <div class="grid-3">
+            <div class="card">
+                <div class="icon">📱</div>
+                <h4>Mobile</h4>
+                <p>React Native, Flutter, Kotlin</p>
+            </div>
+            <div class="card">
+                <div class="icon">💻</div>
+                <h4>Frontend</h4>
+                <p>React, TypeScript, HTML, CSS</p>
+            </div>
+            <div class="card">
+                <div class="icon">⚙️</div>
+                <h4>Languages</h4>
+                <p>C++, Java, Python, OCaml</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Chat & Back to Top -->
-    <button class="chat-btn" id="chat-btn" aria-label="Contact">💬</button>
-    <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+    <!-- Projects -->
+    <section>
+        <h2 class="section-title">🚀 <span>Projects</span></h2>
+        <div class="grid-2">
+            <div class="card">
+                <h4>Login Form</h4>
+                <p>Secure login with validation & responsive UI</p>
+                <div class="tags">
+                    <span>HTML</span><span>CSS</span><span>JS</span>
+                </div>
+            </div>
+            <div class="card">
+                <h4>Registration System</h4>
+                <p>Multi-step form with real-time validation</p>
+                <div class="tags">
+                    <span>HTML</span><span>CSS</span><span>JS</span>
+                </div>
+            </div>
+            <div class="card">
+                <h4>URL Shortener</h4>
+                <p>Smart URL shortener with analytics & QR codes</p>
+                <div class="tags">
+                    <span>HTML</span><span>CSS</span><span>JS</span><span>Chart.js</span>
+                </div>
+            </div>
+            <div class="card">
+                <h4>Weather App</h4>
+                <p>Live weather with 5-day forecast</p>
+                <div class="tags">
+                    <span>HTML</span><span>CSS</span><span>JS</span><span>WeatherAPI</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Main Content -->
-    <main class="main-content" id="main-content">
-        <!-- Home Section -->
-        <section id="home" class="section active">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1 class="hero-title">VIRESH RANJANAGI</h1>
-                        <p class="hero-subtitle">
-                            <span class="typing-container">
-                                <span class="typing-text" id="typing-text">Web Developer</span>
-                            </span>
-                        </p>
-                    </div>
-                    <p class="hero-description">
-                        Web & Mobile App Developer specializing in React Native, TypeScript, and OCaml. 
-                        CSE student passionate about building innovative solutions and mastering dynamic programming.
+    <!-- Education -->
+    <section>
+        <h2 class="section-title">🎓 <span>Education</span></h2>
+
+        <div class="edu-item">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-content">
+                <h4>B.Tech Computer Science Engineering</h4>
+                <div class="meta">RYMEC Ballari · Present</div>
+                <div class="desc">2nd Semester · Focus on web & mobile development</div>
+                <div class="progress"><div class="fill" style="width:25%"></div></div>
+            </div>
+        </div>
+
+        <div class="edu-item">
+            <div class="edu-icon">📚</div>
+            <div class="edu-content">
+                <h4>Higher Secondary (PCMB)</h4>
+                <div class="meta">JSGF Science PU College · Completed</div>
+                <div class="desc">Grade: 95%</div>
+                <div class="progress"><div class="fill" style="width:100%"></div></div>
+            </div>
+        </div>
+
+        <div class="edu-item">
+            <div class="edu-icon">🏫</div>
+            <div class="edu-content">
+                <h4>Primary & High School</h4>
+                <div class="meta">Sarvadnya Vidyapeeth, Vijayapura · Completed</div>
+                <div class="desc">Grade: 90.88%</div>
+                <div class="progress"><div class="fill" style="width:100%"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section>
+        <h2 class="section-title">📜 <span>Certifications</span></h2>
+        <div class="grid-2">
+            <div class="cert-item">
+                <div class="top"><h4>🎯 Dynamic Programming</h4><span class="date">Mar 2026</span></div>
+                <p>Scaler · Advanced DP concepts</p>
+            </div>
+            <div class="cert-item">
+                <div class="top"><h4>☕ Java Fundamentals</h4><span class="date">Feb 2026</span></div>
+                <p>Scaler · 86 video tutorials</p>
+            </div>
+            <div class="cert-item">
+                <div class="top"><h4>🐍 Python & SQL for Data Science</h4><span class="date">Feb 2026</span></div>
+                <p>Scaler · 65 tutorials</p>
+            </div>
+            <div class="cert-item">
+                <div class="top"><h4>➕ C++ Essentials</h4><span class="date">Feb 2026</span></div>
+                <p>Scaler · 91 tutorials, 14 modules</p>
+            </div>
+            <div class="cert-item">
+                <div class="top"><h4>💻 JavaScript Essentials</h4><span class="date">Oct 2022</span></div>
+                <p>LetsUpgrade · 5-day bootcamp</p>
+            </div>
+            <div class="cert-item">
+                <div class="top"><h4>⚙️ C++ Bootcamp</h4><span class="date">Oct 2022</span></div>
+                <p>LetsUpgrade · 5-day intensive</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Achievement -->
+    <section>
+        <div class="highlight-card">
+            <div style="display:flex; align-items:center; gap:0.8rem; flex-wrap:wrap;">
+                <span style="font-size:2rem;">🏆</span>
+                <div>
+                    <h4>Selected for Scaler School of Technology × BITS Pilani</h4>
+                    <p style="font-size:0.85rem; color:var(--text-muted);">
+                        Top 2.8% nationwide · Pathway to B.Sc. in CS from BITS Pilani
                     </p>
-                    <div class="social-links">
-                        <a href="https://github.com/veereshr4446" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
-                        <a href="https://linkedin.com/in/-veeresh-ranjanagi" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
-                        <a href="mailto:veereshtalikoti95@gmail.com" class="social-link">Email</a>
-                    </div>
-                    <button class="cta-button" id="explore-work-btn">
-                        Explore My Work
-                        <span class="cta-arrow">↓</span>
-                    </button>
                 </div>
             </div>
-            <div class="scroll-indicator">↓</div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Technical Skills</h2>
-                    <p class="section-subtitle">Technologies and tools I work with</p>
+    <!-- Contact -->
+    <section>
+        <h2 class="section-title">📧 <span>Contact</span></h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="item">
+                    <span class="icon">📧</span>
+                    <div><div class="label">Email</div><div class="value">veereshtalikoti95@gmail.com</div></div>
                 </div>
-                
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <div class="skill-icon">📱</div>
-                        <h3>Mobile Development</h3>
-                        <div class="skill-bar"></div>
-                        <p class="skill-description">React Native, Flutter, Kotlin</p>
-                    </div>
-                    <div class="skill-category">
-                        <div class="skill-icon">💻</div>
-                        <h3>Frontend</h3>
-                        <div class="skill-bar"></div>
-                        <p class="skill-description">React.js, JavaScript, TypeScript, HTML, CSS</p>
-                    </div>
-                    <div class="skill-category">
-                        <div class="skill-icon">⚙️</div>
-                        <h3>Programming Languages</h3>
-                        <div class="skill-bar"></div>
-                        <p class="skill-description">C, C++, Java, Python, OCaml, Perl</p>
-                    </div>
-                    <div class="skill-category">
-                        <div class="skill-icon">🗄️</div>
-                        <h3>Database & Tools</h3>
-                        <div class="skill-bar"></div>
-                        <p class="skill-description">SQL, Git, GitHub, Data Science</p>
-                    </div>
+                <div class="item">
+                    <span class="icon">📍</span>
+                    <div><div class="label">Location</div><div class="value">Talikoti, Vijayapura</div></div>
                 </div>
-
-                <div class="skills-details">
-                    <div class="skill-card">
-                        <div class="skill-header">
-                            <h3>React Native & Mobile Dev</h3>
-                            <div class="skill-status"></div>
-                        </div>
-                        <p>Building cross-platform mobile applications with React Native, focusing on performance and native-like experiences.</p>
-                        <div class="skill-tags">
-                            <span class="skill-tag">React Native</span>
-                            <span class="skill-tag">Flutter</span>
-                            <span class="skill-tag">Kotlin</span>
-                            <span class="skill-tag">TypeScript</span>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-card">
-                        <div class="skill-header">
-                            <h3>Web Development</h3>
-                            <div class="skill-status"></div>
-                        </div>
-                        <p>Creating responsive and interactive web applications using modern frameworks and vanilla JavaScript.</p>
-                        <div class="skill-tags">
-                            <span class="skill-tag">React.js</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">HTML5</span>
-                            <span class="skill-tag">CSS3</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-header">
-                            <h3>Data Structures & Algorithms</h3>
-                            <div class="skill-status"></div>
-                        </div>
-                        <p>Strong foundation in DSA with expertise in Dynamic Programming and problem-solving using C++ and Java.</p>
-                        <div class="skill-tags">
-                            <span class="skill-tag">C++</span>
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">OCaml</span>
-                        </div>
-                    </div>
+                <div class="item">
+                    <span class="icon">🔗</span>
+                    <div><div class="label">LinkedIn</div><div class="value">/in/-veeresh-ranjanagi</div></div>
+                </div>
+                <div style="margin-top:1rem; color:var(--text-muted); font-size:0.9rem;">
+                    Open to collaborations and opportunities.
                 </div>
             </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Featured Projects</h2>
-                    <p class="section-subtitle">Hands-on projects from my learning journey</p>
-                </div>
-                
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-content">
-                            <div class="project-header">
-                                <div class="project-info">
-                                    <h3>Login Form Application</h3>
-                                    <div class="project-date">
-                                        <span>📅</span>
-                                        <span>2024</span>
-                                    </div>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#" class="project-link">GitHub</a>
-                                    <a href="#" class="project-link">Live Demo</a>
-                                </div>
-                            </div>
-                            <p class="project-description">
-                                A secure login form created using HTML, CSS, and JavaScript with form validation and responsive design.
-                            </p>
-                            <div class="project-tags">
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">CSS</span>
-                                <span class="project-tag">JavaScript</span>
-                                <span class="project-tag">Form Validation</span>
-                            </div>
-                            <div class="project-highlight"></div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-content">
-                            <div class="project-header">
-                                <div class="project-info">
-                                    <h3>Registration Form System</h3>
-                                    <div class="project-date">
-                                        <span>📅</span>
-                                        <span>2024</span>
-                                    </div>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#" class="project-link">GitHub</a>
-                                    <a href="#" class="project-link">Live Demo</a>
-                                </div>
-                            </div>
-                            <p class="project-description">
-                                Complete registration form with user input validation, data collection, and responsive UI design.
-                            </p>
-                            <div class="project-tags">
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">CSS</span>
-                                <span class="project-tag">JavaScript</span>
-                                <span class="project-tag">Form Validation</span>
-                            </div>
-                            <div class="project-highlight"></div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-content">
-                            <div class="project-header">
-                                <div class="project-info">
-                                    <h3>Portfolio Website</h3>
-                                    <div class="project-date">
-                                        <span>📅</span>
-                                        <span>2025</span>
-                                    </div>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#" class="project-link">GitHub</a>
-                                    <a href="#" class="project-link">Live Demo</a>
-                                </div>
-                            </div>
-                            <p class="project-description">
-                                Modern, responsive portfolio website with particle animations, dark/light theme, and smooth navigation.
-                            </p>
-                            <div class="project-tags">
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">CSS</span>
-                                <span class="project-tag">JavaScript</span>
-                                <span class="project-tag">Canvas API</span>
-                            </div>
-                            <div class="project-highlight"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Education</h2>
-                    <p class="section-subtitle">Academic journey and achievements</p>
-                </div>
-                
-                <div class="education-timeline">
-                    <div class="timeline-line"></div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-icon">🎓</div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <h3>B.Tech Computer Science Engineering</h3>
-                                <div class="timeline-date">
-                                    <span>📅</span>
-                                    <span>Present</span>
-                                </div>
-                            </div>
-                            <p class="timeline-description">
-                                RYMEC Ballari Engineering College | 2nd Semester<br>
-                                Pursuing Computer Science Engineering with focus on web and mobile development.
-                            </p>
-                            <div class="timeline-progress">
-                                <div class="progress-bar" style="width: 25%"></div>
-                                <span class="progress-text">In Progress</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-icon">📚</div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <h3>Higher Secondary (11th & 12th)</h3>
-                                <div class="timeline-date">
-                                    <span>📅</span>
-                                    <span>Completed</span>
-                                </div>
-                            </div>
-                            <p class="timeline-description">
-                                JSGF Science PU College, Talikoti | Science PCMB<br>
-                                Grade: 95%
-                            </p>
-                            <div class="timeline-progress">
-                                <div class="progress-bar" style="width: 100%"></div>
-                                <span class="progress-text">Completed</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-icon">🏫</div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <h3>Primary & High School</h3>
-                                <div class="timeline-date">
-                                    <span>📅</span>
-                                    <span>Completed</span>
-                                </div>
-                            </div>
-                            <p class="timeline-description">
-                                Sarvadnya Vidyapeeth Primary and High School, Vijayapura<br>
-                                Grade: 90.88%
-                            </p>
-                            <div class="timeline-progress">
-                                <div class="progress-bar" style="width: 100%"></div>
-                                <span class="progress-text">Completed</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certifications Section -->
-        <section id="certifications" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Certifications</h2>
-                    <p class="section-subtitle">Professional courses and achievements</p>
-                </div>
-                
-                <div class="achievements-grid">
-                    <div class="achievement-card">
-                        <div class="achievement-icon">🎯</div>
-                        <div class="achievement-date">
-                            <span>📅</span>
-                            <span>March 2026</span>
-                        </div>
-                        <h3>Dynamic Programming Course</h3>
-                        <p>Scaler - Learn optimizing complex problems. Completed 12 video tutorials and 1 module covering advanced DP concepts.</p>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-icon">☕</div>
-                        <div class="achievement-date">
-                            <span>📅</span>
-                            <span>February 2026</span>
-                        </div>
-                        <h3>Java Course - Mastering the Fundamentals</h3>
-                        <p>Scaler - Completed 86 video tutorials covering Java programming fundamentals and OOP concepts.</p>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-icon">🐍</div>
-                        <div class="achievement-date">
-                            <span>📅</span>
-                            <span>February 2026</span>
-                        </div>
-                        <h3>Python and SQL for Data Science</h3>
-                        <p>Scaler - 65 video tutorials covering Python programming, SQL queries, and data science fundamentals.</p>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-icon">➕</div>
-                        <div class="achievement-date">
-                            <span>📅</span>
-                            <span>February 2026</span>
-                        </div>
-                        <h3>C++ Course - Learn the Essentials</h3>
-                        <p>Scaler - Completed 91 video tutorials, 14 modules, and 14 challenges covering C++ programming.</p>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-icon">💻</div>
-                        <div class="achievement-date">
-                            <span>📅</span>
-                            <span>October 2022</span>
-                        </div>
-                        <h3>JavaScript Programming Essentials</h3>
-                        <p>LetsUpgrade - 5-day bootcamp on JavaScript fundamentals and web development.</p>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-icon">⚙️</div>
-                        <div class="achievement-date">
-                            <span>📅</span>
-                            <span>October 2022</span>
-                        </div>
-                        <h3>C++ Programming Bootcamp</h3>
-                        <p>LetsUpgrade - 5-day intensive bootcamp on C++ programming essentials.</p>
-                    </div>
-                </div>
-
-                <div class="education-card" style="margin-top: 2rem;">
-                    <div class="education-header">
-                        <div class="education-icon">🏆</div>
-                        <div class="education-info">
-                            <h3>Selected for Scaler School of Technology × BITS Pilani</h3>
-                            <div class="education-date">2025</div>
-                        </div>
-                    </div>
-                    <p class="education-description">
-                        Selected among Top 2.8% nationwide for the prestigious 4-year residential Computer Science program in academic collaboration with BITS Pilani (Institute of Eminence).
-                    </p>
-                    <div class="education-highlights">
-                        <div class="education-highlight">2.8% acceptance rate - Ivy League level selectivity</div>
-                        <div class="education-highlight">Pathway to B.Sc. in Computer Science from BITS Pilani</div>
-                        <div class="education-highlight">96.3% internship placement for first batch</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Get In Touch</h2>
-                    <p class="section-subtitle">Let's collaborate on something amazing</p>
-                </div>
-                
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <div class="contact-card">
-                            <h3>Contact Information</h3>
-                            <div class="contact-methods">
-                                <a href="mailto:veereshtalikoti95@gmail.com" class="contact-method">
-                                    <div class="contact-icon">📧</div>
-                                    <div class="contact-details">
-                                        <p class="contact-label">Email</p>
-                                        <p class="contact-value">veereshtalikoti95@gmail.com</p>
-                                    </div>
-                                </a>
-                                
-                                <div class="contact-method">
-                                    <div class="contact-icon">📍</div>
-                                    <div class="contact-details">
-                                        <p class="contact-label">Location</p>
-                                        <p class="contact-value">Talikoti, Vijayapura, India</p>
-                                    </div>
-                                </div>
-
-                                <a href="https://linkedin.com/in/-veeresh-ranjanagi" target="_blank" class="contact-method">
-                                    <div class="contact-icon">🔗</div>
-                                    <div class="contact-details">
-                                        <p class="contact-label">LinkedIn</p>
-                                        <p class="contact-value">/in/-veeresh-ranjanagi</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-note">
-                            <p>I'm a CSE student passionate about web and mobile development, constantly learning and building innovative solutions. Feel free to reach out for collaborations or opportunities!</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-form-container">
-                        <form class="contact-form" id="contact-form">
-                            <div class="form-group">
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" required placeholder="Enter your name">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" required placeholder="xyz@example.com">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" required placeholder="Project Collaboration">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" required rows="6" placeholder="Tell me about your project..."></textarea>
-                            </div>
-                            
-                            <button type="submit" class="submit-btn">
-                                <span>📤</span>
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+            <form class="contact-form" id="contactForm">
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+                <input type="text" placeholder="Subject" />
+                <textarea rows="4" placeholder="Message..." required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="main-footer">
-        <div class="container">
-            <p class="footer-text">© 2025 Viresh Ranjanagi. Built with passion using modern web technologies.</p>
-        </div>
+    <footer class="footer">
+        © 2025 Viresh Ranjanagi · Built with ❤️
     </footer>
 
-    <script src="js/particles.js"></script>
-    <script src="js/app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
