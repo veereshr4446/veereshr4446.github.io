@@ -85,7 +85,7 @@ cd Veeresh-Portfolio
 
 ## Contact
 
-**Viresh R**
+**Viresh Ranjanagi**
 - GitHub: [@veereshr4446](https://github.com/veereshr4446)
 - LinkedIn: [Viresh Ranjanagi](https://linkedin.com/in/-veeresh-ranjanagi)
 - Email: veereshtalikoti95@gmail.com
